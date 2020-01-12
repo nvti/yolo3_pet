@@ -14,6 +14,7 @@ def main(input_folder):
     XML_FOLDER = os.path.join(input_folder, "annotations/xmls/")
     TRAIN_OUTPUT_FILE = os.path.join(input_folder, "train.txt")
     TEST_OUTPUT_FILE = os.path.join(input_folder, "test.txt")
+    CLASS_OUTPUT_FILE = os.path.join(input_folder, "class.txt")
     SPLIT_RATIO = 0.8
 
     class_names = {}
@@ -59,6 +60,10 @@ def main(input_folder):
 
     print("class {}: {} images".format(output[j-1][-2], i))
     lengths.append(i)
+
+    with open(CLASS_OUTPUT_FILE, "w") as classes:
+        for class_name in class_names:
+            classes.writelines(class_name + '\n')
 
     with open(TRAIN_OUTPUT_FILE, "w") as train, open(TEST_OUTPUT_FILE, "w") as test:
         s = 0
