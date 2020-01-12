@@ -13,3 +13,6 @@ rm annotations.tar.gz
 mkdir -p pretrained
 wget -O pretrained/darknet53.weights https://pjreddie.com/media/files/darknet53.conv.74
 python keras-yolo3/convert.py -w keras-yolo3/darknet53.cfg pretrained/darknet53.weights pretrained/darknet53.h5
+
+wget -O pretrained/yolov3-tiny.weights https://pjreddie.com/media/files/yolov3-tiny.weights
+python keras-yolo3/convert.py -w keras-yolo3/yolov3-tiny.cfg pretrained/yolov3-tiny.weights pretrained/yolov3-tiny.h5
