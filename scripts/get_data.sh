@@ -11,5 +11,5 @@ tar xf annotations.tar.gz -C data annotations/xmls
 rm annotations.tar.gz
 
 mkdir -p pretrained
-wget -0 pretrained/darknet53.weights https://pjreddie.com/media/files/darknet53.conv.74
+wget -O pretrained/darknet53.weights https://pjreddie.com/media/files/darknet53.conv.74
 python keras-yolo3/convert.py -w keras-yolo3/darknet53.cfg pretrained/darknet53.weights pretrained/darknet53.h5
