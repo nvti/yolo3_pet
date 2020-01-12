@@ -77,7 +77,7 @@ def main(input_folder):
                     print("Warning: {} contains invalid box. Skipped...".format(path))
                     continue
 
-                row = "{} {},{},{},{}\n".format(
+                row = "{} {},{},{},{},{}\n".format(
                     path, xmin, ymin, xmax, ymax, class_id)
                 if i <= c * SPLIT_RATIO:
                     train.writelines(row)
