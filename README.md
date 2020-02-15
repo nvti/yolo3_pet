@@ -1,1 +1,2 @@
-# yolo3_pet
+# Pet localization using YOLOv3 model
+
